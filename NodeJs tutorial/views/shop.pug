@@ -1,0 +1,14 @@
+extends layouts/main-layout.pug
+block content 
+    h2 Shop
+    main.grid 
+        if prods.length > 0
+            
+            // looping the product
+            each product in prods
+                article.product-item 
+                    h1 #{product.title}
+                    p #{product.description}
+                    button.btn Add to Cart
+        else 
+            h1 No Products
