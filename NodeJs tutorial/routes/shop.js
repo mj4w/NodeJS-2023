@@ -1,15 +1,7 @@
 const express = require('express');
 const router = express.Router();
-const path = require('path');
-const adminData = require('./admin');
+const productsController = require('../controllers/product');
 
-router.get('/',(req,res,next) => {
-    const products = adminData.products;
-    // this is for pug
-    res.render('shop', {prods: products, docTitle: 'Shop Products'});
-    // console.log('shop.js',adminData.products);
-    // // cd to views the folder name & next the file name
-    // res.sendFile(path.join(__dirname, '../', 'views', 'shop.html')); // send a response
-});
+router.get('/',productsController.getProducts);
 
 module.exports = router;

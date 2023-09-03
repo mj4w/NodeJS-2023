@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+</head>
+<body>
+    <h1>Display Users</h1>
+    <% if (name.length > 0) { %>
+        <% for (let n of name) { %>
+            <h1><%= n.title %></h1>
+        <% } %>
+    <% } else { %>
+        <h1>No name display</h1>
+    <% } %>
+
+    
+</body>
+</html>

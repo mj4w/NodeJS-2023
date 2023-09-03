@@ -1,0 +1,14 @@
+<main>
+    <h1>My Products</h1>
+    <!--Using handlebars you can't do logic in the looping or in condition you need to place it to the js file-->
+    {{#if hasProducts}}
+
+        {{#each prods}}
+        {{this.title}}
+        {{this.description}}
+        {{/each}}
+    {{ else }}
+        <h1>No Products</h1>
+
+    {{/if}}
+</main>
