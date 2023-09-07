@@ -1,74 +1,83 @@
 body {
-    padding: 0;
-    font-family: sans-serif;
     margin: 0;
-}
-.main-header {
-    width: 100%;
-    height: 3.5rem;
-    background-color: black;
-}
-.main-header__item-list {
-    list-style: none;
-    margin:0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+.main-header__nav {
     display: flex;
-
+    background-color:darkslategray;
+    width: 100%;
 }
 
-.main-header__item {
-    margin: 0 1rem;
-    padding: 0;
+a.active {
+    background-color:indigo;
+    color: white;
+    padding: 10px;
 }
-.main-header__item a {
+a {
     text-decoration: none;
-    color: white;
+    color:aliceblue;
 }
-.main-header__nav{
-    height: 100%;
+
+.main_header__item-list {
     display: flex;
+    list-style: none;
+    justify-items: center;
     align-items: center;
-    padding: 0 1.5rem;
-
-}
-.main-header__item a:hover,
-.main-header__item a:active,
-.main-header__item a.active {
-    color:yellow;
-}
-main {
-    padding: 1rem;
-}
-.form-control,
-.form-control input {
-    display: block;
-    width: 100%;
-}
-.form-control input {
-    border: 1px solid rgb(58, 58, 58);
-    font: inherit;
-    border-radius: 2px;
-}
-button {
-    font: inherit;
-    border: 1px solid black;
-    background-color: white;
-    border-radius: 3px;
-    cursor: pointer;
-}
-.form-control {
-    margin: 1rem 0;
-
-}
-button:hover,
-button:active{
-    background-color: purple;
-    color: white;
-
-}
-.product-form {
-    width: 30rem;
-    max-width: 90%;
     margin: auto;
 
+}
+.main-header__item {
+    padding: 10px;
+}
+
+.container-product {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:5px;
+    width: 50%;
+    align-items: center;
+    margin: auto;
+
+}
+.container-product__item {
+    padding: 10px;
+    text-align: center;
+}
+
+.container-product__layout {
+    background-color:cadetblue;
+    padding:20px;
+    border-radius: 10px;
+}
+.container-product__layout h1 {
+    color: white;
+    
+}
+
+.product-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+
+.product-form {
+    text-align: center;
+}
+
+.form-control {
+    padding: 10px;
+    width: 100%;
+}
+.form-control label {
+    display: flex;
+}
+.form-control input {
+    font-size: 15px;
+    width: 100%;
+}
+.form-control textarea {
+    width: 100%;
 }

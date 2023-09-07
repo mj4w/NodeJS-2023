@@ -3,6 +3,8 @@ const products = [];
 // next gen javascript
 const fs = require('fs');
 const path = require('path');
+
+
 const p = path.join(path.dirname(process.mainModule.filename), 'data',
 'products.json'
 );
@@ -18,9 +20,11 @@ const getProductsFromFile = (cb) => {
 };
 
 module.exports = class Product {
-    constructor(title,description){
+    constructor(title,description,imageUrl,price){
         this.title = title
         this.description = description
+        this.imageUrl = imageUrl
+        this.price = price
     }
     save(){
         getProductsFromFile(products => {
